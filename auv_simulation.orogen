@@ -1,0 +1,17 @@
+name "auv_simulation"
+
+using_task_library "simulation" #aka mars_core
+using_task_library "auv_control"
+
+
+
+deployment 'auv_simulation' do
+    task 'simulation','simulation::Mars'
+    task 'thrusters','simulation::AuvMotion'
+    task 'sonar_top','simulation::Sonar'
+    task 'sonar_bottom','simulation::Sonar'
+    task 'camera_front','simulation::MarsCamera'
+    task 'camera_bottom','simulation::MarsCamera'
+    task 'imu','simulation::MarsIMU'
+end
+

@@ -1,0 +1,7 @@
+--- name:default
+# The name of the imu frame.
+imu_frame: imu
+# name of the node in the scene file from which to get the imu data
+name: avalon 
+# The name of the world frame.
+world_frame: world

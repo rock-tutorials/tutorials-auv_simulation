@@ -1,0 +1,12 @@
+--- name:default
+# start the simulation graphical interface with this module
+initial_scene:  "<%= ENV['AUTOPROJ_PROJECT_BASE'] %>/tutorials/orogen/auv_simulation/configuration/avalon.scn"
+enable_gui: 1
+reaction_to_physics_error: "warn"
+start_sim: true 
+realtime_calc: true
+gravity: 
+  data:
+  - 0 
+  - 0 
+  - 0

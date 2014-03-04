@@ -1,0 +1,9 @@
+--- name:default
+# frames per second
+#fps: 10
+# name of the camera in the scene file
+name: ''
+--- name:front_cam
+name: 'front_cam'
+--- name:bottom_cam
+name: 'bottom_cam'

@@ -1,0 +1,107 @@
+--- name:default
+# no documentation available for this property
+amount_of_actuators: 6
+# Buoyancy force applied to the vehicle
+buoyancy_force: 72.0
+# Center of Bouyancy, with respect to the origin of the vehicle
+cob:
+  data:
+  - 0.0
+  - 0.0
+  - 0.08
+# Linear damping coefficients, in 6 degrees of freedom
+linear_damp:
+  data:
+  - 8.0
+  - 24.0
+  - 24.0
+  - 10.0
+  - 10.0
+  - 10.0
+# no documentation available for this property
+maximum_thruster_force:
+- 10.0
+- 10.0
+- 10.0
+- 10.0
+- 10.0
+- 10.0
+# no documentation available for this property
+metadata:
+  metadata: []
+  properties: []
+  input_ports: []
+  output_ports: []
+# no documentation available for this property
+node_name: avalon
+# Square damping coefficients, in 6 degrees of freedom
+square_damp:
+  data:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+# The square coefficients of the thrusters, the size of the list must be the amount of actuators
+thruster_coefficients:
+- 0.005
+- 0.005
+- 0.005
+- 0.005
+- 0.005
+- 0.005
+# no documentation available for this property
+thruster_direction:
+- data:
+  - 0.0
+  - 0.0
+  - 1.0
+- data:
+  - 0.0
+  - 0.0
+  - 1.0
+- data:
+  - -1.0
+  - 0.0
+  - 0.0
+- data:
+  - -1.0
+  - 0.0
+  - 0.0
+- data:
+  - 0.0
+  - 1.0
+  - 0.0
+- data:
+  - 0.0
+  - -1.0
+  - 0.0
+# no documentation available for this property
+thruster_position:
+- data:
+  - -0.5955
+  - 0.0
+  - 0.0
+- data:
+  - 0.0
+  - 0.0
+  - 0.0
+- data:
+  - 0.0
+  - -0.157
+  - 0.0
+- data:
+  - 0.0
+  - 0.157
+  - 0.0
+- data:
+  - -0.688
+  - 0.082
+  - 0.0
+- data:
+  - 0.0
+  - 0.0
+  - 0.0
+# Maximum volatage of the thrusters, used for pwm to force calculation
+voltage: 28.0
