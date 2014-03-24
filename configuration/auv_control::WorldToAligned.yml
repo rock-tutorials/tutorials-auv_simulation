@@ -3,8 +3,8 @@
 # set once we merged all the declared input ports.
 expected_inputs:
   linear:
-  - true
-  - true
+  - false
+  - false
   - true
   angular:
   - true

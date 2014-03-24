@@ -3,8 +3,8 @@
 # set once we merged all the declared input ports.
 expected_inputs:
   linear:
-  - true
-  - true
+  - false
+  - false
   - true
   angular:
   - true
@@ -93,8 +93,8 @@ world_frame: false
 # set once we merged all the declared input ports.
 expected_inputs:
   linear:
-  - true
-  - true
+  - false
+  - false
   - true
   angular:
   - true
@@ -150,7 +150,7 @@ pid_settings:
     YMin: -1.0
     YMax: 1.0
   - Ts: 0.01
-    K: 0.2
+    K: 1.0
     Ti: 0.0
     Td: 0.0
     N: 0.0
@@ -330,7 +330,7 @@ pid_settings:
     YMin: -1.0
     YMax: 1.0
   - Ts: 0.01
-    K: 2.0
+    K: 6.0
     Ti: 0.0
     Td: 0.0
     N: 0.0

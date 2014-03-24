@@ -2,7 +2,7 @@
 # no documentation available for this property
 amount_of_actuators: 6
 # Buoyancy force applied to the vehicle
-buoyancy_force: 72.0
+buoyancy_force: 71.0
 # Center of Bouyancy, with respect to the origin of the vehicle
 cob:
   data:

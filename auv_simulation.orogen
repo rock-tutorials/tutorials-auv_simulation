@@ -13,5 +13,19 @@ deployment 'auv_simulation' do
     task 'camera_front','simulation::MarsCamera'
     task 'camera_bottom','simulation::MarsCamera'
     task 'imu','simulation::MarsIMU'
+    task('ctrl_wta','auv_control::WorldToAligned').
+        periodic(0.01)
+    task('ctrl_apc','auv_control::PIDController').
+        periodic(0.01)
+    task('ctrl_avc','auv_control::PIDController').
+        periodic(0.01)
+    task('ctrl_atb','auv_control::AlignedToBody').
+        periodic(0.01)
+    task('ctrl_acc','auv_control::AccelerationController').
+        periodic(0.01)
+    task('ctrl_world_cmd_producer','auv_control::ConstantCommand').
+        periodic(0.5)
+    task('ctrl_velocity_cmd_producer','auv_control::ConstantCommand').
+        periodic(0.5)
 end
 
