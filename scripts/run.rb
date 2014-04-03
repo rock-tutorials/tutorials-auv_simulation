@@ -6,6 +6,7 @@ Orocos.initialize
 widget = Vizkit.load "simulator.ui"
 
 Orocos.run "auv_simulation" do 
+    #Get TaskContext from Orocos
     mars = Orocos::TaskContext.get "simulation"
     thrusters = Orocos::TaskContext.get "thrusters"
     imu = Orocos::TaskContext.get "imu"
@@ -20,10 +21,11 @@ Orocos.run "auv_simulation" do
     acceleration_controller = Orocos::TaskContext.get "ctrl_acc"
     world_cmd_producer = Orocos::TaskContext.get "ctrl_world_cmd_producer"
     velocity_cmd_producer = Orocos::TaskContext.get "ctrl_velocity_cmd_producer"
-
    
-
+    #Load config-files from dev/tutorials/orogen/auv_simulation/configuration
     Orocos.conf.load_dir(File.join(ENV['AUTOPROJ_PROJECT_BASE'],"tutorials", "orogen", "auv_simulation", "configuration"))
+    
+    #Apply configs to the tasks
     Orocos.conf.apply(mars,['default'])
     Orocos.conf.apply(thrusters,['default'])
     Orocos.conf.apply(imu,['default'])
@@ -51,9 +53,6 @@ Orocos.run "auv_simulation" do
     sonar_top.configure
     sonar_top.start
 
-    #sonar_bottom.configure
-    #sonar_bottom.start
-
     camera_front.configure
     camera_front.start
 
@@ -61,13 +60,13 @@ Orocos.run "auv_simulation" do
     camera_bottom.start
 
     #Configure auv_control
-    
     world_to_aligned.configure
     aligned_position_controller.configure
     aligned_velocity_controller.configure
     aligned_to_body.configure
     acceleration_controller.configure
 
+    #Configure the command producers
     cmd_world = world_cmd_producer.cmd
     cmd_world.linear[0] = NaN;
     cmd_world.linear[1] = NaN;
@@ -142,7 +141,4 @@ Orocos.run "auv_simulation" do
     Vizkit.display camera_bottom.frame, :widget => widget.camera_bottom
     widget.show 
     Vizkit.exec
-    #loop do
-    #    sleep 1
-    #end
 end
