@@ -7,6 +7,6 @@
   <url>http://</url>
   <logo>http://</logo>
   <depend package="base/cmake" />
-  <depend package="simulation/orogen/mars_core" />
+  <depend package="simulation/orogen/mars" />
   <depend package="control/orogen/auv_control" />
 </package>
